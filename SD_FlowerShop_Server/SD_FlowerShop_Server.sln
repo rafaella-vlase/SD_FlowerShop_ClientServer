@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD_FlowerShop_Server", "SD_FlowerShop_Server\SD_FlowerShop_Server.csproj", "{F3E00014-400F-4F34-BA35-42FE64BA6F57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD_FlowerShop_Server", "SD_FlowerShop_Server\SD_FlowerShop_Server.csproj", "{6F657E1E-C7D6-483A-97E4-89BCF9A49915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3E00014-400F-4F34-BA35-42FE64BA6F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3E00014-400F-4F34-BA35-42FE64BA6F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3E00014-400F-4F34-BA35-42FE64BA6F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3E00014-400F-4F34-BA35-42FE64BA6F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F657E1E-C7D6-483A-97E4-89BCF9A49915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F657E1E-C7D6-483A-97E4-89BCF9A49915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F657E1E-C7D6-483A-97E4-89BCF9A49915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F657E1E-C7D6-483A-97E4-89BCF9A49915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C116AEF8-1F21-4FCC-8B7E-5798A8736621}
+		SolutionGuid = {8A7E1D29-CF35-42D4-8ED3-C7819A3E5589}
 	EndGlobalSection
 EndGlobal
