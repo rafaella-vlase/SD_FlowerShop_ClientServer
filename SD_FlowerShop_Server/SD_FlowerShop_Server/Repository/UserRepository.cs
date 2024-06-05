@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SD_FlowerShop_Server.Repository
 {
-    public class UserRepository
+    public class UserRepository: IUserRepository
     {
         private Repository repository;
 

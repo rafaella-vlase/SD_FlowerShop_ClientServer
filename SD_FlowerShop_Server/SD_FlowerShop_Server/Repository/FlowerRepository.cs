@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SD_FlowerShop_Server.Repository
 {
-    public class FlowerRepository
+    public class FlowerRepository : IFlowerRepository
     {
         private Repository repository;
 

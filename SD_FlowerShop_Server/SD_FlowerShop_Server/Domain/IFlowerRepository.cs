@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SD_FlowerShop_Server.Domain
 {
-    public interface IFlowerRepository
+    public interface IFlowerRepository 
     {
         bool AddFlower(Flower flower);
         bool DeleteFlower(uint flowerID, uint shopID);
