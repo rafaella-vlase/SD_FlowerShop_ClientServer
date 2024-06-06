@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SD_FlowerShop_Server.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,11 @@ namespace SD_FlowerShop_Server
     {
         static void Main(string[] args)
         {
+            CombinedServiceHost host = new CombinedServiceHost();
+            host.Start();
+            Console.WriteLine("Services are running. Press Enter to exit...");
+            Console.ReadLine();
+            host.Stop();
         }
     }
 }
