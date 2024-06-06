@@ -43,7 +43,27 @@ namespace SD_FlowerShop_Server.Service
         {
             get { return this.statisticsResult; }
         }
+        private void statisticalDetermination()
+        {
+            foreach (Flower flower in this.flowerList)
+            {
+                string key = flower.FlowerName.ToUpper();
+                if (this.criterion.ToUpper() == "COLOR")
+                {
+                    key = flower.Color.ToUpper();
+                }
 
+                if (this.statisticsResult.ContainsKey(key))
+                {
+                    this.statisticsResult[key] += 1;
+                }
+                else
+                {
+                    this.statisticsResult[key] = 1;
+                }
+            }
+
+        }
        
     }
 }
