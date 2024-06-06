@@ -49,10 +49,6 @@
     <Compile Include="Domain\Flower.cs" />
     <Compile Include="Domain\IFlowerRepository.cs" />
     <Compile Include="Domain\IUserRepository.cs" />
-    <Compile Include="Domain\Language\LangHelper.cs" />
-    <Compile Include="Domain\Language\Observable.cs" />
-    <Compile Include="Domain\Language\string.en.Designer.cs" />
-    <Compile Include="Domain\Language\Subject.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,10 +68,5 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Domain\Language\string.en.resx" />
-    <EmbeddedResource Include="Domain\Language\string.fr.resx" />
-    <EmbeddedResource Include="Domain\Language\string.it.resx" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
