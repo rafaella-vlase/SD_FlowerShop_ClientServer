@@ -117,26 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="admin_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\admin_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonAdd" xml:space="preserve">
+    <value>Add</value>
   </data>
-  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonDelete" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="defaultBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\defaultBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonLogin" xml:space="preserve">
+    <value>Login</value>
   </data>
-  <data name="employee_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\employee_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonLogout" xml:space="preserve">
+    <value>Logout</value>
   </data>
-  <data name="loginBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\loginBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveCSV" xml:space="preserve">
+    <value>Save CSV</value>
   </data>
-  <data name="manager_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\manager_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveDOC" xml:space="preserve">
+    <value>Save DOC</value>
   </data>
-  <data name="rose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\rose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveJSON" xml:space="preserve">
+    <value>Save JSON</value>
+  </data>
+  <data name="buttonSaveXML" xml:space="preserve">
+    <value>Save XML</value>
+  </data>
+  <data name="buttonSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="buttonStatistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="buttonUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="buttonViewAll" xml:space="preserve">
+    <value>View All</value>
+  </data>
+  <data name="labelChangeLanguage" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="labelColor" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="labelCriterion" xml:space="preserve">
+    <value>Criterion</value>
+  </data>
+  <data name="labelFilterBy" xml:space="preserve">
+    <value>Filter By</value>
+  </data>
+  <data name="labelFlowerID" xml:space="preserve">
+    <value>Flower ID</value>
+  </data>
+  <data name="labelFlowerName" xml:space="preserve">
+    <value>Flower Name</value>
+  </data>
+  <data name="labelFlowerShop" xml:space="preserve">
+    <value>Flower Shop</value>
+  </data>
+  <data name="labelOrderBy" xml:space="preserve">
+    <value>Order By</value>
+  </data>
+  <data name="labelPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="labelPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="labelRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="labelSearchFlower" xml:space="preserve">
+    <value>Search Flower By Name</value>
+  </data>
+  <data name="labelSearchRole" xml:space="preserve">
+    <value>Search user by role</value>
+  </data>
+  <data name="labelSelectLanguage" xml:space="preserve">
+    <value>Select Language:</value>
+  </data>
+  <data name="labelShopID" xml:space="preserve">
+    <value>Shop ID</value>
+  </data>
+  <data name="labelStock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="labelUserID" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="labelUsername" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="messageBoxAddFail" xml:space="preserve">
+    <value>Adding ended with failure!</value>
+  </data>
+  <data name="messageBoxAddSuccess" xml:space="preserve">
+    <value>Adding was successful!</value>
+  </data>
+  <data name="messageBoxColorEmpty" xml:space="preserve">
+    <value>Color is empty!</value>
+  </data>
+  <data name="messageBoxDeleteFail" xml:space="preserve">
+    <value>Deletion ended with failure!</value>
+  </data>
+  <data name="messageBoxDeleteSuccess" xml:space="preserve">
+    <value>Deleting was successful!</value>
+  </data>
+  <data name="messageBoxFileSaveSuccess" xml:space="preserve">
+    <value>File save successfully!</value>
+  </data>
+  <data name="messageBoxFlowerIDNonZero" xml:space="preserve">
+    <value>Flower ID must be non-zero natural number!</value>
+  </data>
+  <data name="messageBoxFlowerNameEmpty" xml:space="preserve">
+    <value>Flower Name is empty!</value>
+  </data>
+  <data name="messageBoxNoData" xml:space="preserve">
+    <value>There is no data in your table!</value>
+  </data>
+  <data name="messageBoxNoFlowerAvailable" xml:space="preserve">
+    <value>There is no flower available!</value>
+  </data>
+  <data name="messageBoxNoFlowerDesiredName" xml:space="preserve">
+    <value>There is no flower with desired name!</value>
+  </data>
+  <data name="messageBoxNoFlowerSelected" xml:space="preserve">
+    <value>No flower has been selected to be deleted!</value>
+  </data>
+  <data name="messageBoxNoUserDesiredRole" xml:space="preserve">
+    <value>No user with desired role!</value>
+  </data>
+  <data name="messageBoxNoUserSelected" xml:space="preserve">
+    <value>No user has been selected to be updated!</value>
+  </data>
+  <data name="messageBoxPasswordEmpty" xml:space="preserve">
+    <value>Password is empty!</value>
+  </data>
+  <data name="messageBoxPriceHigher" xml:space="preserve">
+    <value>Price should be higher than 0!</value>
+  </data>
+  <data name="messageBoxRoleEmpty" xml:space="preserve">
+    <value>Role is empty!</value>
+  </data>
+  <data name="messageBoxSearchEmpty" xml:space="preserve">
+    <value>Search bar is empty!</value>
+  </data>
+  <data name="messageBoxShopIDNonZero" xml:space="preserve">
+    <value>Shop ID must be non-zero natural number!</value>
+  </data>
+  <data name="messageBoxStockMinZero" xml:space="preserve">
+    <value>Stock should be at least 0!</value>
+  </data>
+  <data name="messageBoxUpdateFail" xml:space="preserve">
+    <value>Updating ended with failure!</value>
+  </data>
+  <data name="messageBoxUpdateSuccess" xml:space="preserve">
+    <value>Updating was successful!</value>
+  </data>
+  <data name="messageBoxUserIDNonZero" xml:space="preserve">
+    <value>User ID must be non-zero natural number!</value>
+  </data>
+  <data name="messageBoxUsernameEmpty" xml:space="preserve">
+    <value>Username is empty!</value>
   </data>
 </root>

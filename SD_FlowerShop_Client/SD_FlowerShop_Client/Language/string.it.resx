@@ -117,26 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="admin_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\admin_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonAdd" xml:space="preserve">
+    <value>Aggiungi</value>
   </data>
-  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonDelete" xml:space="preserve">
+    <value>Elimina</value>
   </data>
-  <data name="defaultBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\defaultBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonLogin" xml:space="preserve">
+    <value>Login</value>
   </data>
-  <data name="employee_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\employee_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonLogout" xml:space="preserve">
+    <value>Disconnetti</value>
   </data>
-  <data name="loginBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\loginBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveCSV" xml:space="preserve">
+    <value>Salva CSV</value>
   </data>
-  <data name="manager_bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\manager_bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveDOC" xml:space="preserve">
+    <value>Salva DOC</value>
   </data>
-  <data name="rose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\rose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSaveJSON" xml:space="preserve">
+    <value>Salva JSON</value>
+  </data>
+  <data name="buttonSaveXML" xml:space="preserve">
+    <value>Salva XML</value>
+  </data>
+  <data name="buttonSearch" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="buttonStatistics" xml:space="preserve">
+    <value>Statistiche</value>
+  </data>
+  <data name="buttonUpdate" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="buttonViewAll" xml:space="preserve">
+    <value>Vedi tutto</value>
+  </data>
+  <data name="labelChangeLanguage" xml:space="preserve">
+    <value>Cambia lingua</value>
+  </data>
+  <data name="labelColor" xml:space="preserve">
+    <value>Colore</value>
+  </data>
+  <data name="labelCriterion" xml:space="preserve">
+    <value>Criterio</value>
+  </data>
+  <data name="labelFilterBy" xml:space="preserve">
+    <value>Filtra per</value>
+  </data>
+  <data name="labelFlowerID" xml:space="preserve">
+    <value>ID del fiore</value>
+  </data>
+  <data name="labelFlowerName" xml:space="preserve">
+    <value>Nome del fiore</value>
+  </data>
+  <data name="labelFlowerShop" xml:space="preserve">
+    <value>Negozio di fiori</value>
+  </data>
+  <data name="labelOrderBy" xml:space="preserve">
+    <value>Ordina per</value>
+  </data>
+  <data name="labelPassword" xml:space="preserve">
+    <value>Parola d'ordine</value>
+  </data>
+  <data name="labelPrice" xml:space="preserve">
+    <value>Prezzo</value>
+  </data>
+  <data name="labelRole" xml:space="preserve">
+    <value>Ruolo</value>
+  </data>
+  <data name="labelSearchFlower" xml:space="preserve">
+    <value>Cerca fiore per nome</value>
+  </data>
+  <data name="labelSearchRole" xml:space="preserve">
+    <value>Cerca utente per ruolo</value>
+  </data>
+  <data name="labelSelectLanguage" xml:space="preserve">
+    <value>Seleziona la lingua:</value>
+  </data>
+  <data name="labelShopID" xml:space="preserve">
+    <value>Identificativo del negozio</value>
+  </data>
+  <data name="labelStock" xml:space="preserve">
+    <value>Magazzino</value>
+  </data>
+  <data name="labelUserID" xml:space="preserve">
+    <value>ID dell’utente</value>
+  </data>
+  <data name="labelUsername" xml:space="preserve">
+    <value>Nome utente</value>
+  </data>
+  <data name="messageBoxAddFail" xml:space="preserve">
+    <value>L’aggiunta è fallita!</value>
+  </data>
+  <data name="messageBoxAddSuccess" xml:space="preserve">
+    <value>L’aggiunta è stata un successo!</value>
+  </data>
+  <data name="messageBoxColorEmpty" xml:space="preserve">
+    <value>Il colore è vuoto!</value>
+  </data>
+  <data name="messageBoxDeleteFail" xml:space="preserve">
+    <value>L’eliminazione è fallita!</value>
+  </data>
+  <data name="messageBoxDeleteSuccess" xml:space="preserve">
+    <value>L’eliminazione è stata un successo!</value>
+  </data>
+  <data name="messageBoxFileSaveSuccess" xml:space="preserve">
+    <value>File salvato con successo!</value>
+  </data>
+  <data name="messageBoxFlowerIDNonZero" xml:space="preserve">
+    <value>L’ID del fiore deve essere un numero naturale non zero!</value>
+  </data>
+  <data name="messageBoxFlowerNameEmpty" xml:space="preserve">
+    <value>Il nome del fiore è vuoto!</value>
+  </data>
+  <data name="messageBoxNoData" xml:space="preserve">
+    <value>Non ci sono dati nella tua tabella!</value>
+  </data>
+  <data name="messageBoxNoFlowerAvailable" xml:space="preserve">
+    <value>Non c’è un fiore disponibile!</value>
+  </data>
+  <data name="messageBoxNoFlowerDesiredName" xml:space="preserve">
+    <value>Non c’è un fiore con il nome desiderato!</value>
+  </data>
+  <data name="messageBoxNoFlowerSelected" xml:space="preserve">
+    <value>Nessun fiore è stato selezionato per l’eliminazione!</value>
+  </data>
+  <data name="messageBoxNoUserDesiredRole" xml:space="preserve">
+    <value>Nessun utente con il ruolo desiderato!</value>
+  </data>
+  <data name="messageBoxNoUserSelected" xml:space="preserve">
+    <value>Nessun utente è stato selezionato per l’aggiornamento!</value>
+  </data>
+  <data name="messageBoxPasswordEmpty" xml:space="preserve">
+    <value>La password è vuota!</value>
+  </data>
+  <data name="messageBoxPriceHigher" xml:space="preserve">
+    <value>Il prezzo dovrebbe essere superiore a 0!</value>
+  </data>
+  <data name="messageBoxRoleEmpty" xml:space="preserve">
+    <value>Il ruolo è vuoto!</value>
+  </data>
+  <data name="messageBoxSearchEmpty" xml:space="preserve">
+    <value>La barra di ricerca è vuota!</value>
+  </data>
+  <data name="messageBoxShopIDNonZero" xml:space="preserve">
+    <value>L’ID del negozio deve essere un numero naturale non zero!</value>
+  </data>
+  <data name="messageBoxStockMinZero" xml:space="preserve">
+    <value>Il magazzino dovrebbe essere almeno 0!</value>
+  </data>
+  <data name="messageBoxUpdateFail" xml:space="preserve">
+    <value>L’aggiornamento è fallito!</value>
+  </data>
+  <data name="messageBoxUpdateSuccess" xml:space="preserve">
+    <value>L’aggiornamento è stato un successo!</value>
+  </data>
+  <data name="messageBoxUserIDNonZero" xml:space="preserve">
+    <value>L’ID dell’utente deve essere un numero naturale non zero!</value>
+  </data>
+  <data name="messageBoxUsernameEmpty" xml:space="preserve">
+    <value>Il nome utente è vuoto!</value>
   </data>
 </root>

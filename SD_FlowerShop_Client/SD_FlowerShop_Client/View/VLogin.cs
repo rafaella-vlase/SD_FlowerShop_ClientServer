@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SD_FlowerShop_Client
+namespace SD_FlowerShop_Client.View
 {
-    public partial class Form1 : Form
+    public partial class VLogin : Form
     {
-        public Form1()
+        public VLogin()
         {
             InitializeComponent();
         }
