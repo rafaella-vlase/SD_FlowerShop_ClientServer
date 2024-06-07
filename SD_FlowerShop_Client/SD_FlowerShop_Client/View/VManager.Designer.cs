@@ -61,6 +61,12 @@
             this.buttonViewAll = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewFlowers = new System.Windows.Forms.DataGridView();
+            this.flowerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlowers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShopID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBubble)).BeginInit();
@@ -428,12 +434,55 @@
             this.dataGridViewFlowers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewFlowers.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewFlowers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFlowers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.flowerID,
+            this.flowerName,
+            this.color,
+            this.price,
+            this.stock,
+            this.shopID});
             this.dataGridViewFlowers.Location = new System.Drawing.Point(76, 772);
             this.dataGridViewFlowers.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewFlowers.Name = "dataGridViewFlowers";
             this.dataGridViewFlowers.RowHeadersWidth = 82;
             this.dataGridViewFlowers.Size = new System.Drawing.Size(1888, 685);
             this.dataGridViewFlowers.TabIndex = 87;
+            // 
+            // flowerID
+            // 
+            this.flowerID.HeaderText = "Flower ID";
+            this.flowerID.MinimumWidth = 10;
+            this.flowerID.Name = "flowerID";
+            // 
+            // flowerName
+            // 
+            this.flowerName.HeaderText = "Flower Name";
+            this.flowerName.MinimumWidth = 10;
+            this.flowerName.Name = "flowerName";
+            // 
+            // color
+            // 
+            this.color.HeaderText = "Color";
+            this.color.MinimumWidth = 10;
+            this.color.Name = "color";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.MinimumWidth = 10;
+            this.price.Name = "price";
+            // 
+            // stock
+            // 
+            this.stock.HeaderText = "Stock";
+            this.stock.MinimumWidth = 10;
+            this.stock.Name = "stock";
+            // 
+            // shopID
+            // 
+            this.shopID.HeaderText = "Shop ID";
+            this.shopID.MinimumWidth = 10;
+            this.shopID.Name = "shopID";
             // 
             // VManager
             // 
@@ -523,5 +572,11 @@
         private System.Windows.Forms.Button buttonViewAll;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.DataGridView dataGridViewFlowers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flowerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flowerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shopID;
     }
 }

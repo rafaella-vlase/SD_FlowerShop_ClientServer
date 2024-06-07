@@ -3,39 +3,39 @@
   "WorkspaceRootPath": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\repository\\flowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\repository\\flowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\repository\\flowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\service\\flowerservicehost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\flowerservicehost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\service\\iflowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\iflowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\service\\flowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\service\\flowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\flowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\service\\flowerservicehost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\flowerservicehost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\domain\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\domain\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\service\\iflowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\iflowerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -64,14 +64,14 @@
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Service\\FlowerService.cs",
               "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Service\\FlowerService.cs",
               "RelativeToolTip": "SD_FlowerShop_Server\\Service\\FlowerService.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAkwF4AAAAJAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAqwDwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-07T09:31:12.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "App.config",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\App.config",
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\App.config",
@@ -79,12 +79,11 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-07T09:28:59.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T09:28:59.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FlowerServiceHost.cs",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Service\\FlowerServiceHost.cs",
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Service\\FlowerServiceHost.cs",
@@ -92,18 +91,17 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\Service\\FlowerServiceHost.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwCkAAABmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T09:19:07.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T09:19:07.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "IFlowerService.cs",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Service\\IFlowerService.cs",
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Service\\IFlowerService.cs",
               "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Service\\IFlowerService.cs",
               "RelativeToolTip": "SD_FlowerShop_Server\\Service\\IFlowerService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCcAAAA1AAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAA9wCcAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-07T09:09:07.449Z",
               "EditorCaption": ""
@@ -118,8 +116,7 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\Service\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T08:54:22.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T08:54:22.802Z"
             },
             {
               "$type": "Document",
@@ -131,8 +128,7 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\Domain\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:44:12.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T07:44:12.377Z"
             },
             {
               "$type": "Document",
@@ -144,8 +140,7 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\Repository\\UserRepository.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAAowGoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:24:48.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T07:24:48.958Z"
             },
             {
               "$type": "Document",
@@ -155,7 +150,7 @@
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Repository\\FlowerRepository.cs",
               "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Repository\\FlowerRepository.cs",
               "RelativeToolTip": "SD_FlowerShop_Server\\Repository\\FlowerRepository.cs",
-              "ViewState": "AQIAAC8BAAAAAAAAAAAQwOcAAABAAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAqwG8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-07T07:20:35.185Z",
               "EditorCaption": ""
@@ -174,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Flower.cs",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Domain\\Flower.cs",
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Domain\\Flower.cs",
@@ -182,8 +177,7 @@
               "RelativeToolTip": "SD_FlowerShop_Server\\Domain\\Flower.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T20:11:39.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T20:11:39.87Z"
             },
             {
               "$type": "Document",

@@ -112,7 +112,10 @@ namespace SD_FlowerShop_Client.Controller
                         }
                         else if (role.Equals("Manager"))
                         {
-                            MessageBox.Show("Manager success");
+                            this.vLogin.Hide();
+                            
+                            ControllerManager controllerManager = new ControllerManager(index);
+                            controllerManager.GetView();
                         }
                         else if (role.Equals("Administrator"))
                         {
