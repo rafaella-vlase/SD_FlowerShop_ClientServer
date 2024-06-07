@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using static System.Net.Mime.MediaTypeNames;
 using System.IO;
 using System.Reflection;
+using Microsoft.Office.Interop.Excel;
 
 namespace SD_FlowerShop_Client.Controller
 {
@@ -93,6 +94,7 @@ namespace SD_FlowerShop_Client.Controller
             this.vEmployee.GetSearchButton().Click += new EventHandler(searchBy);
             this.vEmployee.GetFilterByBox().SelectedIndexChanged += new EventHandler(filterBy);
             this.vEmployee.GetOrderByBox().SelectedIndexChanged += new EventHandler(orderBy);
+            this.vEmployee.GetSellButton().Click += new EventHandler(sellFlower);
             this.vEmployee.GetViewAllButton().Click += new EventHandler(viewAll);
             this.vEmployee.GetSaveCSVButton().Click += new EventHandler(saveCSV);
             this.vEmployee.GetSaveJSONButton().Click += new EventHandler(saveJSON);
@@ -101,6 +103,11 @@ namespace SD_FlowerShop_Client.Controller
             this.vEmployee.GetLogoutButton().Click += new EventHandler(logout);
             this.vEmployee.GetFlowerTable().RowStateChanged += new DataGridViewRowStateChangedEventHandler(setFlowerControls);
             this.vEmployee.GetLanguageBox().SelectedIndexChanged += new EventHandler(changeLanguage);
+        }
+
+        private void ControllerEmployee_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void exitApplication(object sender, FormClosedEventArgs e)
@@ -121,6 +128,39 @@ namespace SD_FlowerShop_Client.Controller
             else if (this.vEmployee.GetLanguageBox().SelectedIndex == 2)
             {
                 this.lang.ChangeLanguage("it");
+            }
+        }
+
+        private void sellFlower(object sender, EventArgs e)
+        {
+
+            if (this.vEmployee.GetFlowerTable().SelectedRows.Count > 0)
+            {
+                DataGridViewRow drvr = this.vEmployee.GetFlowerTable().SelectedRows[0];
+
+
+                int stock = Convert.ToInt32(drvr.Cells[4].Value.ToString());
+                int sell = Convert.ToInt32(this.vEmployee.GetSellQuantity().Text);
+
+
+
+                //if(sell <= stock)
+                //{
+                //    int newStock = stock - sell;
+                //    Flower flower = this.validInformation();
+                //    bool result = this.iFlowerService.UpdateFlower(flower);
+
+                //    if (result == true)
+                //    {
+                //        MessageBox.Show(lang.GetString("messageBoxUpdateSuccess"));
+                //        if (this.vEmployee.GetFlowerTable().Columns.Contains("shopID"))
+                //            this.vEmployee.GetFlowerTable().Columns.Remove("shopID");
+                //        this.resetGUIControls();
+
+                //        if (this.vEmployee.GetFlowerTable() == null)
+                //            MessageBox.Show(lang.GetString("messageBoxNoData"));
+                //    }
+                //}
             }
         }
 

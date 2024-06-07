@@ -67,6 +67,9 @@
             this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxSell = new System.Windows.Forms.TextBox();
+            this.labelSell = new System.Windows.Forms.Label();
+            this.buttonSell = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlowers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBubble)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
@@ -372,7 +375,7 @@
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.MistyRose;
-            this.buttonDelete.Location = new System.Drawing.Point(1271, 508);
+            this.buttonDelete.Location = new System.Drawing.Point(1286, 557);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(6);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(157, 64);
@@ -383,7 +386,7 @@
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.MistyRose;
-            this.buttonUpdate.Location = new System.Drawing.Point(1007, 508);
+            this.buttonUpdate.Location = new System.Drawing.Point(1022, 557);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(157, 64);
@@ -394,7 +397,7 @@
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.MistyRose;
-            this.buttonAdd.Location = new System.Drawing.Point(745, 508);
+            this.buttonAdd.Location = new System.Drawing.Point(760, 557);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(157, 64);
@@ -479,6 +482,38 @@
             this.stock.MinimumWidth = 10;
             this.stock.Name = "stock";
             // 
+            // textBoxSell
+            // 
+            this.textBoxSell.Location = new System.Drawing.Point(1075, 464);
+            this.textBoxSell.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxSell.Multiline = true;
+            this.textBoxSell.Name = "textBoxSell";
+            this.textBoxSell.Size = new System.Drawing.Size(349, 38);
+            this.textBoxSell.TabIndex = 121;
+            // 
+            // labelSell
+            // 
+            this.labelSell.AutoSize = true;
+            this.labelSell.BackColor = System.Drawing.Color.Transparent;
+            this.labelSell.Font = new System.Drawing.Font("Segoe Script", 15F, System.Drawing.FontStyle.Bold);
+            this.labelSell.Location = new System.Drawing.Point(730, 447);
+            this.labelSell.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelSell.Name = "labelSell";
+            this.labelSell.Size = new System.Drawing.Size(317, 67);
+            this.labelSell.TabIndex = 120;
+            this.labelSell.Text = "Sell Quantity";
+            // 
+            // buttonSell
+            // 
+            this.buttonSell.BackColor = System.Drawing.Color.MistyRose;
+            this.buttonSell.Location = new System.Drawing.Point(1478, 438);
+            this.buttonSell.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonSell.Name = "buttonSell";
+            this.buttonSell.Size = new System.Drawing.Size(157, 64);
+            this.buttonSell.TabIndex = 122;
+            this.buttonSell.Text = "Sell";
+            this.buttonSell.UseVisualStyleBackColor = false;
+            // 
             // VEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -486,6 +521,9 @@
             this.BackgroundImage = global::SD_FlowerShop_Client.Properties.Resources.defaultBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2884, 1525);
+            this.Controls.Add(this.buttonSell);
+            this.Controls.Add(this.textBoxSell);
+            this.Controls.Add(this.labelSell);
             this.Controls.Add(this.labelChangeLanguage);
             this.Controls.Add(this.comboBoxChangeLanguage);
             this.Controls.Add(this.pictureBoxFlowers);
@@ -571,5 +609,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn color;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.TextBox textBoxSell;
+        private System.Windows.Forms.Label labelSell;
+        private System.Windows.Forms.Button buttonSell;
     }
 }

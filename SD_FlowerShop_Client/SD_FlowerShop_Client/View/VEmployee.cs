@@ -24,6 +24,7 @@ namespace SD_FlowerShop_Client.View
             this.comboBoxFilterBy.SelectedIndex = 0;
             this.comboBoxOrderBy.SelectedIndex = 0;
             this.textBoxSearch.Text = string.Empty;
+            this.textBoxSell.Text = string.Empty;
 
             this.comboBoxChangeLanguage.SelectedIndex = index;
         }
@@ -67,6 +68,12 @@ namespace SD_FlowerShop_Client.View
         public ComboBox GetLanguageBox()
         {
             return this.comboBoxChangeLanguage;
+        }
+
+        public TextBox GetSellQuantity()
+        {
+
+           return this.textBoxSell;
         }
 
         public TextBox GetSearch()
@@ -133,6 +140,11 @@ namespace SD_FlowerShop_Client.View
         public Button GetLogoutButton()
         {
             return this.buttonLogout;
+        }
+
+        public Button GetSellButton()
+        {
+           return this.buttonSell;
         }
 
         public void Update(Subject obs)
