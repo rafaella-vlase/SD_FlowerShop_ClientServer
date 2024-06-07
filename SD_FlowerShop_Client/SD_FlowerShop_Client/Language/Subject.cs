@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC_FlowerShop.Model
+namespace SD_FlowerShop_Client
 {
     public abstract class Subject
     {

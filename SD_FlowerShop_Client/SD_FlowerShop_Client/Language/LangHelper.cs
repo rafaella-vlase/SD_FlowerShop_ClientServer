@@ -1,5 +1,4 @@
-﻿using MVC_FlowerShop.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC_FlowerShop.Model.Language
+namespace SD_FlowerShop_Client.Language
 {
     public class LangHelper : Subject
     {
@@ -17,7 +16,7 @@ namespace MVC_FlowerShop.Model.Language
         public LangHelper()
         {
             this.obsList = new List<Observable>();
-            rm = new ResourceManager("MVC_FlowerShop.Model.Language.string", Assembly.GetExecutingAssembly());
+            rm = new ResourceManager("SD_FlowerShop_Client.Language.string", Assembly.GetExecutingAssembly());
         }
 
         public string GetString(string name)

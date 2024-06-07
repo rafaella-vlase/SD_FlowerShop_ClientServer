@@ -1,2 +1,7 @@
 E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.csproj.AssemblyReference.cache
 E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.csproj.CoreCompileInputs.cache
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\bin\Debug\SD_FlowerShop_Server.exe.config
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\bin\Debug\SD_FlowerShop_Server.exe
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\bin\Debug\SD_FlowerShop_Server.pdb
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.exe
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.pdb
