@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\sd_flowershop_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\domain\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\domain\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_server\\sd_flowershop_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F657E1E-C7D6-483A-97E4-89BCF9A49915}|SD_FlowerShop_Server\\SD_FlowerShop_Server.csproj|solutionrelative:sd_flowershop_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Flower.cs",
+              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Domain\\Flower.cs",
+              "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Domain\\Flower.cs",
+              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Domain\\Flower.cs",
+              "RelativeToolTip": "SD_FlowerShop_Server\\Domain\\Flower.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwF8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T20:11:39.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Server\\SD_FlowerShop_Server\\Program.cs",
               "RelativeDocumentMoniker": "SD_FlowerShop_Server\\Program.cs",

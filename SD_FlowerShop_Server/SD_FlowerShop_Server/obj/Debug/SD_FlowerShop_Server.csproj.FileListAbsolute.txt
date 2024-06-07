@@ -1,0 +1,2 @@
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.csproj.AssemblyReference.cache
+E:\Facultate\SD_FlowerShop_ClientServer\SD_FlowerShop_Server\SD_FlowerShop_Server\obj\Debug\SD_FlowerShop_Server.csproj.CoreCompileInputs.cache
