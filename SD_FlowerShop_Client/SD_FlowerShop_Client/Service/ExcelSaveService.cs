@@ -30,7 +30,7 @@ namespace SD_FlowerShop_Client.Service
                 object misValue = System.Reflection.Missing.Value;
                 _Workbook workbook = app.Workbooks.Add(misValue);
                 _Worksheet worksheet = workbook.Worksheets[1];
-                worksheet.Name = "Company";
+                worksheet.Name = "Flowers";
                 worksheet.EnableSelection = XlEnableSelection.xlNoSelection;
 
                 Range xlRange;

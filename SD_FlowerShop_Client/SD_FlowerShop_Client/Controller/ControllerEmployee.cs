@@ -452,7 +452,7 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
                 //MemoryStream chartImage = new MemoryStream();
-                List<Flower> flowerList = new List<Flower>();
+                List<Flower> flowerList = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
                 string figureTitle = "Flower List Figure";
 
                 fileSaveService.CreateFile(flowerList, figureTitle);
@@ -471,7 +471,7 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
                 //MemoryStream chartImage = new MemoryStream();
-                List<Flower> flowerList = new List<Flower>();
+                List<Flower> flowerList = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
                 string figureTitle = "Flower List Figure";
 
                 fileSaveService.CreateFile(flowerList, figureTitle);
@@ -490,7 +490,7 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
                 //MemoryStream chartImage = new MemoryStream();
-                List<Flower> flowerList = new List<Flower>();
+                List<Flower> flowerList = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
                 string figureTitle = "Flower List Figure";
 
                 fileSaveService.CreateFile(flowerList, figureTitle);
@@ -509,7 +509,7 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
                 //MemoryStream chartImage = new MemoryStream();
-                List<Flower> flowerList = new List<Flower>();
+                List<Flower> flowerList = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
                 string figureTitle = "Car List Figure";
 
                 fileSaveService.CreateFile(flowerList, figureTitle);

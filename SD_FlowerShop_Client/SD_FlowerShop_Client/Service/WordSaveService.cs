@@ -46,11 +46,11 @@ namespace SD_FlowerShop_Client.Service
                 object missing = System.Reflection.Missing.Value;
                 Paragraph paragraph = document.Content.Paragraphs.Add(ref missing);
                 paragraph.Range.Font.Size = 40;
-                paragraph.Range.Text = "Employees List" + Environment.NewLine;
+                paragraph.Range.Text = "Flowers List" + Environment.NewLine;
                 paragraph.Range.InsertParagraphAfter();
                 paragraph.Range.Font.Size = 14;
                 int rowsNumber = flowerList.Count + 1;
-                Table table = document.Tables.Add(paragraph.Range, rowsNumber, 5, missing, missing);
+                Table table = document.Tables.Add(paragraph.Range, rowsNumber, 6, missing, missing);
                 table.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
                 table.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
                 table.Columns[1].PreferredWidth = 70;
@@ -58,7 +58,8 @@ namespace SD_FlowerShop_Client.Service
                 table.Columns[3].PreferredWidth = 60;
                 table.Columns[4].PreferredWidth = 80;
                 table.Columns[5].PreferredWidth = 110;
-                for (int j = 1; j <= 5; j++)
+                table.Columns[6].PreferredWidth = 110;
+                for (int j = 1; j <= 6; j++)
                 {
                     table.Cell(1, j).Range.Font.Bold = 1;
                     table.Cell(1, j).Range.Font.Size = 12;
