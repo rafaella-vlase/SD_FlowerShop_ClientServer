@@ -131,7 +131,7 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
-        private void notifyRepairedWhatsapp()
+        private void notifyWhatsapp()
         {
             try
             {
@@ -157,7 +157,7 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
-        private void notifyRepairedEmail()
+        private void notifyEmail()
         {
             try
             {
@@ -198,8 +198,8 @@ namespace SD_FlowerShop_Client.Controller
                         if (result)
                         {
                             MessageBox.Show(lang.GetString("messageBoxUpdateSuccess"));
-                            notifyRepairedEmail();
-                            notifyRepairedWhatsapp();
+                            notifyEmail();
+                            notifyWhatsapp();
                             this.resetGUIControls();
                         }
                         else MessageBox.Show(lang.GetString("messageBoxUpdateFail"));
