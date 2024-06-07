@@ -81,7 +81,9 @@
     <Compile Include="Service\ExcelSaveService.cs" />
     <Compile Include="Service\FileSaveService.cs" />
     <Compile Include="Service\FileSaveServiceFactory.cs" />
+    <Compile Include="Service\JSONSaveService.cs" />
     <Compile Include="Service\WordSaveService.cs" />
+    <Compile Include="Service\XMLSaveService.cs" />
     <Compile Include="View\VAdministrator.cs">
       <SubType>Form</SubType>
     </Compile>

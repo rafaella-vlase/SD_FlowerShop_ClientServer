@@ -29,12 +29,18 @@ namespace SD_FlowerShop_Client.Controller
         private VEmployee vEmployee;
         private VLogin vLogin;
         private IFlowerService iFlowerService;
+        private IUserService iUserService;
+        private uint shopIDEmployee;
 
-        public ControllerEmployee(int index)
+        private string username;
+
+        public ControllerEmployee(int index, string username)
         {
             this.vEmployee = new VEmployee(index);
             this.lang = new LangHelper();
             this.lang.Add(this.vEmployee);
+            this.shopIDEmployee = Convert.ToUInt32(iUserService.GetShopID(username));
+            this.username = username;
             this.createBinding();
             this.eventsManagement();
         }
@@ -455,11 +461,87 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
+        private void saveCSV(object sender, EventArgs e)
+        {
+            try
+            {
+                FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Excel;
+                FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
+
+                MemoryStream chartImage = new MemoryStream();
+                List<Flower> flowerList = new List<Flower>();
+                string figureTitle = "Flower List Figure";
+
+                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void saveJSON(object sender, EventArgs e)
+        {
+            try
+            {
+                FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.JSON;
+                FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
+
+                MemoryStream chartImage = new MemoryStream();
+                List<Flower> flowerList = new List<Flower>();
+                string figureTitle = "Flower List Figure";
+
+                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void saveXML(object sender, EventArgs e)
+        {
+            try
+            {
+                FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.XML;
+                FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
+
+                MemoryStream chartImage = new MemoryStream();
+                List<Flower> flowerList = new List<Flower>();
+                string figureTitle = "Flower List Figure";
+
+                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void saveDOC(object sender, EventArgs e)
+        {
+            try
+            {
+                FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Word;
+                FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
+
+                MemoryStream chartImage = new MemoryStream();
+                List<Flower> flowerList = new List<Flower>();
+                string figureTitle = "Car List Figure";
+
+                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void logout(object sender, EventArgs e)
         {
             try
             {
-                ControllerLogin login = new ControllerLogin(index);
+                ControllerLogin login = new ControllerLogin(1);
                 login.GetView();
                 this.vEmployee.Hide();
             }
@@ -567,7 +649,7 @@ namespace SD_FlowerShop_Client.Controller
                 return null;
             }
 
-            string shopIDString = IUserRepository.GetShopID(username);
+            string shopIDString = iUserService.GetShopID(username);
             uint shopID = Convert.ToUInt32(shopIDString);
             if (shopID == 0)
             {
@@ -577,5 +659,4 @@ namespace SD_FlowerShop_Client.Controller
             return new Flower(flowerID, shopID, flowerName, color, price, stock);
         }
     }
-}
 }

@@ -19,11 +19,13 @@ namespace SD_FlowerShop_Client.Controller
         private LangHelper lang;
         private VLogin vLogin;
         private IUserService iUserService;
+        private int index;
 
         public ControllerLogin(int index)
         {
             this.vLogin = new VLogin(index);
             this.lang = new LangHelper();
+            this.index = index;
             this.createBinding();
             this.eventsManagement();      
         }
@@ -101,10 +103,10 @@ namespace SD_FlowerShop_Client.Controller
                         string role = this.iUserService.GetRole(username, password);
                         if (role.Equals("Employee"))
                         {
-                            //this.vLogin.Hide();
-                            //ControllerEmployee controllerEmployee = new ControllerEmployee();
-                            //controllerEmployee.GetView();
-                            MessageBox.Show("Employee success");
+                            this.vLogin.Hide();
+                            ControllerEmployee controllerEmployee = new ControllerEmployee(index, username);
+                            controllerEmployee.GetView();
+
                         }
                         else if (role.Equals("Manager"))
                         {
