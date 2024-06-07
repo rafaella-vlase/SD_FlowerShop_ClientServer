@@ -52,8 +52,9 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
-        public VLogin getView()
+        public VLogin GetView()
         {
+            this.vLogin.Show();
             return this.vLogin;
         }
 
@@ -100,6 +101,9 @@ namespace SD_FlowerShop_Client.Controller
                         string role = this.iUserService.GetRole(username, password);
                         if (role.Equals("Employee"))
                         {
+                            //this.vLogin.Hide();
+                            //ControllerEmployee controllerEmployee = new ControllerEmployee();
+                            //controllerEmployee.GetView();
                             MessageBox.Show("Employee success");
                         }
                         else if (role.Equals("Manager"))

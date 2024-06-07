@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SD_FlowerShop_Client.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace SD_FlowerShop_Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            ControllerLogin login = new ControllerLogin(0);
+            Application.Run(login.GetView());
         }
     }
 }
