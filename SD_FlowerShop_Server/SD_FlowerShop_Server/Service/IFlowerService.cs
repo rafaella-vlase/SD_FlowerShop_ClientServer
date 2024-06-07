@@ -74,5 +74,12 @@ namespace SD_FlowerShop_Server.Service
         [OperationContract]
 
         List<Flower> SearchFlowerByType(string type);
+
+        [OperationContract]
+        List<Flower> SearchFlowerByTypeEmployee(string type, string shopID);
+
+        [OperationContract]
+
+        Dictionary<string, uint> FlowerStatistics(string criterion);
     }
 }

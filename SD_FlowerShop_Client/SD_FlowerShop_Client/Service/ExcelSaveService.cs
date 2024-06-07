@@ -21,7 +21,7 @@ namespace SD_FlowerShop_Client.Service
             this.fileType = "Excel files (*.xlsx)|*.xlsx";
         }
 
-        protected override void save(MemoryStream chartImage, List<Flower> flowerList, string figureTitle, string fileName)
+        protected override void save(List<Flower> flowerList, string figureTitle, string fileName)
         {
             try
             {
@@ -84,17 +84,17 @@ namespace SD_FlowerShop_Client.Service
                             xlRange.Interior.Color = Color.White;
                     }
                 }
-                string target = this.createImage(chartImage);
-                if (target != null && target != "")
-                {
-                    worksheet.Cells[rowsNumber + 5, 2] = "Adding picture in Excel File";
-                    worksheet.Range[worksheet.Cells[rowsNumber + 6, 2], worksheet.Cells[rowsNumber + 15, 5]].Merge();
-                    xlRange = worksheet.Cells[rowsNumber + 6, 2];
-                    float left = (float)((double)xlRange.Left);
-                    float top = (float)((double)xlRange.Top);
-                    worksheet.Shapes.AddPicture(target, MsoTriState.msoFalse, MsoTriState.msoCTrue, left, top, xlRange.Width * 10, xlRange.Height * 15);
-                    this.deleteFile(target);
-                }
+                //string target = this.createImage(chartImage);
+                //if (target != null && target != "")
+                //{
+                //    worksheet.Cells[rowsNumber + 5, 2] = "Adding picture in Excel File";
+                //    worksheet.Range[worksheet.Cells[rowsNumber + 6, 2], worksheet.Cells[rowsNumber + 15, 5]].Merge();
+                //    xlRange = worksheet.Cells[rowsNumber + 6, 2];
+                //    float left = (float)((double)xlRange.Left);
+                //    float top = (float)((double)xlRange.Top);
+                //    worksheet.Shapes.AddPicture(target, MsoTriState.msoFalse, MsoTriState.msoCTrue, left, top, xlRange.Width * 10, xlRange.Height * 15);
+                //    this.deleteFile(target);
+                //}
                 workbook.SaveAs(fileName, misValue, misValue, misValue, misValue, misValue, XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                 this.objectRelease(worksheet);
                 workbook.Close(true, misValue, misValue);

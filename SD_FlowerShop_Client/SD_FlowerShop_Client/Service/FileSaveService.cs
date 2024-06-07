@@ -16,7 +16,7 @@ namespace SD_FlowerShop_Client.Service
         protected string extension;
         protected string fileType;
 
-        public void CreateFile(MemoryStream chartImage, List<Flower> flowerList, string figureTitle)
+        public void CreateFile(List<Flower> flowerList, string figureTitle)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "Enter the file name!";
@@ -35,7 +35,7 @@ namespace SD_FlowerShop_Client.Service
                         GC.WaitForPendingFinalizers();
                         File.Delete(sfd.FileName);
                     }
-                    this.save(chartImage, flowerList, figureTitle, sfd.FileName);
+                    this.save(flowerList, figureTitle, sfd.FileName);
                     DialogResult dialogResult = MessageBox.Show("Do you want to open the file??", "Save completed!", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -49,22 +49,22 @@ namespace SD_FlowerShop_Client.Service
             }
         }
 
-        protected string createImage(MemoryStream chartImage)
-        {
-            string pathNameFile = "";
-            try
-            {
-                Image returnImage = Image.FromStream(chartImage);
-                returnImage.Save("chart.jpg", ImageFormat.Jpeg);
-                string path = Directory.GetCurrentDirectory();
-                pathNameFile = path + "\\chart.jpg";
-                return pathNameFile;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
+        //protected string createImage(MemoryStream chartImage)
+        //{
+        //    string pathNameFile = "";
+        //    try
+        //    {
+        //        Image returnImage = Image.FromStream(chartImage);
+        //        returnImage.Save("chart.jpg", ImageFormat.Jpeg);
+        //        string path = Directory.GetCurrentDirectory();
+        //        pathNameFile = path + "\\chart.jpg";
+        //        return pathNameFile;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+        //}
 
         protected void deleteFile(string target)
         {
@@ -72,7 +72,7 @@ namespace SD_FlowerShop_Client.Service
                 File.Delete(target);
         }
         protected abstract void openFile(string fileName);
-        protected abstract void save(MemoryStream chartImage, List<Flower> flowerList, string figureTitle, string fileName);
+        protected abstract void save(List<Flower> flowerList, string figureTitle, string fileName);
     }
 }
 

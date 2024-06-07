@@ -17,7 +17,7 @@ namespace SD_FlowerShop_Client.Service
             this.extension = ".docx";
             this.fileType = "Word File (.docx ,.doc)|*.docx";
         }
-        protected override void save(MemoryStream chartImage, List<Flower> flowerList, string figureTitle, string fileName)
+        protected override void save(List<Flower> flowerList, string figureTitle, string fileName)
         {
             try
             {
@@ -88,16 +88,16 @@ namespace SD_FlowerShop_Client.Service
                 paragraph.Range.Text = Environment.NewLine;
                 paragraph.Range.Text = Environment.NewLine;
                 paragraph.Range.InlineShapes.AddHorizontalLineStandard();
-                string target = this.createImage(chartImage);
-                if (target != null && target != "")
-                {
-                    paragraph.Range.InlineShapes.AddPicture(target);
-                    paragraph.Range.InsertParagraphAfter();
-                    paragraph.Range.Text = "Figure: " + figureTitle;
-                    paragraph.Range.Font.Size = 14;
-                    paragraph.Range.InsertParagraphAfter();
-                    this.deleteFile(target);
-                }
+                //string target = this.createImage(chartImage);
+                //if (target != null && target != "")
+                //{
+                //    paragraph.Range.InlineShapes.AddPicture(target);
+                //    paragraph.Range.InsertParagraphAfter();
+                //    paragraph.Range.Text = "Figure: " + figureTitle;
+                //    paragraph.Range.Font.Size = 14;
+                //    paragraph.Range.InsertParagraphAfter();
+                //    this.deleteFile(target);
+                //}
                 paragraph.Range.InlineShapes.AddHorizontalLineStandard();
                 document.SaveAs2(fileName);
                 document.Close();

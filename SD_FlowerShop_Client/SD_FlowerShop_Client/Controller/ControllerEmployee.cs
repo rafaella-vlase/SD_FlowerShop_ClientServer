@@ -224,18 +224,30 @@ namespace SD_FlowerShop_Client.Controller
                 if (this.vEmployee.GetSearch().Text.Length > 0)
                 {
                     string searchedFlower = this.vEmployee.GetSearch().Text;
-                    List<Flower> list = this.iFlowerService.SearchFlowerByType(searchedFlower);
+                    List<Flower> list = this.iFlowerService.SearchFlowerByTypeEmployee(searchedFlower, shopIDEmployee.ToString());
 
 
                     if (list != null && list.Count > 0)
                     {
                         foreach (Flower f in list)
                         {
-                            this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock, f.ShopID);
+                            this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                         }
 
                     }
-                    else MessageBox.Show(lang.GetString("messageBoxNoFlowerDesiredName"));
+                    else
+                    {
+                        list = this.iFlowerService.SearchFlowerByType(searchedFlower);
+                        if (list != null && list.Count > 0)
+                        {
+                            foreach (Flower f in list)
+                            {
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock, f.ShopID);
+                            }
+
+                        }
+                        else MessageBox.Show(lang.GetString("messageBoxNoFlowerDesiredName"));
+                    }
                 }
             }
             catch (Exception exception)
@@ -398,11 +410,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Excel;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -417,11 +429,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.JSON;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -436,11 +448,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.XML;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -455,11 +467,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Word;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Car List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {

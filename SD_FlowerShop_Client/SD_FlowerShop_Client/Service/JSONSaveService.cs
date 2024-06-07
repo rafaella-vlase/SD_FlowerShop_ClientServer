@@ -23,7 +23,7 @@ namespace SD_FlowerShop_Client.Service
             this.fileType = "JSON files (*.json)|*.json";
         }
 
-        protected override void save(MemoryStream chartImage, List<Flower> flowerList, string figureTitle, string fileName)
+        protected override void save(List<Flower> flowerList, string figureTitle, string fileName)
         {
             try
             {
@@ -34,8 +34,8 @@ namespace SD_FlowerShop_Client.Service
                 File.WriteAllText(fileName, json);
 
                 // Optionally, handle the chart image if needed (e.g., save it alongside the JSON file)
-                string imagePath = Path.ChangeExtension(fileName, ".jpg");
-                SaveChartImage(chartImage, imagePath);
+                //string imagePath = Path.ChangeExtension(fileName, ".jpg");
+                //SaveChartImage(chartImage, imagePath);
             }
             catch (Exception exception)
             {
@@ -60,21 +60,21 @@ namespace SD_FlowerShop_Client.Service
             }
         }
 
-        private void SaveChartImage(MemoryStream chartImage, string imagePath)
-        {
-            try
-            {
-                // Save the chart image as a JPEG file
-                using (Image image = Image.FromStream(chartImage))
-                {
-                    image.Save(imagePath, ImageFormat.Jpeg);
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show("Error saving the chart image! " + exception.ToString());
-            }
-        }
+        //private void SaveChartImage(MemoryStream chartImage, string imagePath)
+        //{
+        //    try
+        //    {
+        //        // Save the chart image as a JPEG file
+        //        using (Image image = Image.FromStream(chartImage))
+        //        {
+        //            image.Save(imagePath, ImageFormat.Jpeg);
+        //        }
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        MessageBox.Show("Error saving the chart image! " + exception.ToString());
+        //    }
+        //}
     }
 }
 

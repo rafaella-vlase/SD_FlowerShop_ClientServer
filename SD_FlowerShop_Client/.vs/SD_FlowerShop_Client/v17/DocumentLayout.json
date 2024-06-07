@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_client\\sd_flowershop_client\\controller\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\controller\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\sd_flowershop_client\\controller\\controlleremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\controller\\controlleremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_client\\sd_flowershop_client\\view\\vmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\view\\vmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\sd_flowershop_client\\controller\\controllermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\controller\\controllermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_client\\sd_flowershop_client\\view\\vmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\view\\vmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\sd_flowershop_client\\view\\vstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\view\\vstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|e:\\facultate\\sd_flowershop_clientserver\\sd_flowershop_client\\sd_flowershop_client\\controller\\controllerstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|solutionrelative:sd_flowershop_client\\controller\\controllerstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{113BE857-5B38-410E-9B4C-198827156087}|SD_FlowerShop_Client\\SD_FlowerShop_Client.csproj|E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\sd_flowershop_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,49 +30,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControllerLogin.cs",
-              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerLogin.cs",
-              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\Controller\\ControllerLogin.cs",
-              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerLogin.cs",
-              "RelativeToolTip": "SD_FlowerShop_Client\\Controller\\ControllerLogin.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAwwHUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T10:37:20.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VManager.cs [Design]",
-              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VManager.cs",
-              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\View\\VManager.cs",
-              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VManager.cs [Design]",
-              "RelativeToolTip": "SD_FlowerShop_Client\\View\\VManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T10:31:03.961Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VManager.cs",
-              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VManager.cs",
-              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\View\\VManager.cs",
-              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VManager.cs",
-              "RelativeToolTip": "SD_FlowerShop_Client\\View\\VManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
+              "Title": "VStatistics.cs",
+              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VStatistics.cs",
+              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\View\\VStatistics.cs",
+              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\View\\VStatistics.cs",
+              "RelativeToolTip": "SD_FlowerShop_Client\\View\\VStatistics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T10:05:03.625Z",
+              "WhenOpened": "2024-06-07T11:40:16.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ControllerStatistics.cs",
+              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerStatistics.cs",
+              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\Controller\\ControllerStatistics.cs",
+              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerStatistics.cs",
+              "RelativeToolTip": "SD_FlowerShop_Client\\Controller\\ControllerStatistics.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwDwAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T11:31:51.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControllerManager.cs",
+              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerManager.cs",
+              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\Controller\\ControllerManager.cs",
+              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerManager.cs",
+              "RelativeToolTip": "SD_FlowerShop_Client\\Controller\\ControllerManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALsBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T11:18:42.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControllerEmployee.cs",
+              "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerEmployee.cs",
+              "RelativeDocumentMoniker": "SD_FlowerShop_Client\\Controller\\ControllerEmployee.cs",
+              "ToolTip": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Controller\\ControllerEmployee.cs",
+              "RelativeToolTip": "SD_FlowerShop_Client\\Controller\\ControllerEmployee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAO4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T11:18:03.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Facultate\\SD_FlowerShop_ClientServer\\SD_FlowerShop_Client\\SD_FlowerShop_Client\\Program.cs",
               "RelativeDocumentMoniker": "SD_FlowerShop_Client\\Program.cs",

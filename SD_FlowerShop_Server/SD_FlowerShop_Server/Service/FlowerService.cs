@@ -100,5 +100,16 @@ namespace SD_FlowerShop_Server.Service
         {
             return this.iFlowerRepository.SearchFlowerByType(type);
         }
+
+        public List<Flower> SearchFlowerByTypeEmployee(string type, string shopID)
+        {
+            return this.iFlowerRepository.SearchFlowerByTypeEmployee(type, shopID);
+        }
+
+        public Dictionary<string, uint> FlowerStatistics(string criterion)
+        {
+            StatisticsService statisticsService = new StatisticsService(criterion);
+            return statisticsService.StatisticsResult;
+        }
     }
 }

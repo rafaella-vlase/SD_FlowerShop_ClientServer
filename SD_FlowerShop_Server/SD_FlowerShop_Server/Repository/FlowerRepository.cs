@@ -56,10 +56,10 @@ namespace SD_FlowerShop_Server.Repository
             resultFlowers = this.repository.CommandSQL(commandSQL);
 
 
-            string commandSQL2 = "update FlowersShop set price = ";
+            string commandSQL2 = "update FlowersShop set price = '";
             commandSQL2 += flower.Price;
-            commandSQL2 += ", stock = " + flower.Stock;
-            commandSQL2 += " where shopID = " + flower.ShopID + " and flowerID = " + flower.FlowerID;
+            commandSQL2 += "', stock = '" + flower.Stock;
+            commandSQL2 += "' where shopID = '" + flower.ShopID + "' and flowerID = '" + flower.FlowerID + "'";
             resultFlowersShop = this.repository.CommandSQL(commandSQL2);
 
             return (resultFlowers && resultFlowersShop);
@@ -69,8 +69,8 @@ namespace SD_FlowerShop_Server.Repository
         {
             string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
             selectSQL += "FROM Flowers AS F\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
             DataTable flowerTable = this.repository.GetTable(selectSQL);
             if (flowerTable == null || flowerTable.Rows.Count == 0)
             {
@@ -83,8 +83,8 @@ namespace SD_FlowerShop_Server.Repository
         {
             string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
             selectSQL += "FROM Flowers AS F\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\nwhere 1=0;";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\nwhere 1=0;";
             DataTable flowerTable = this.repository.GetTable(selectSQL);
             if (flowerTable == null || flowerTable.Rows.Count == 0)
             {
@@ -97,8 +97,8 @@ namespace SD_FlowerShop_Server.Repository
         {
             string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
             selectSQL += "FROM Flowers AS F\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
             selectSQL += "WHERE S.shopID = " + shopID + ";";
             //Debug.WriteLine(selectSQL);
             DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -144,8 +144,8 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "ORDER BY F.color, FS.price" + ";";
 
 
@@ -168,8 +168,8 @@ namespace SD_FlowerShop_Server.Repository
 
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE S.shopID = " + shopID;
                 selectSQL += "\nORDER BY F.color, FS.price" + ";";
 
@@ -196,8 +196,8 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.stock > 0" + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -217,8 +217,8 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.stock > 0" + " AND S.shopID = " + shopID + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -245,8 +245,8 @@ namespace SD_FlowerShop_Server.Repository
                 float price = (float)Convert.ToDouble(priceString);
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.price = " + price + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -267,8 +267,8 @@ namespace SD_FlowerShop_Server.Repository
                 float price = (float)Convert.ToDouble(priceString);
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.price = " + price + " AND FS.shopID = " + shopID + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -292,8 +292,8 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE F.color = '" + color + "';";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -313,8 +313,8 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE F.color = '" + color + "' AND FS.shopID = " + shopID + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -336,8 +336,8 @@ namespace SD_FlowerShop_Server.Repository
         {
             string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
             selectSQL += "FROM Flowers AS F\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
             selectSQL += "WHERE S.shopID = " + shopID + ";";
 
             DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -364,8 +364,8 @@ namespace SD_FlowerShop_Server.Repository
                 Debug.WriteLine(stock);
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.stock = " + stock + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -386,8 +386,8 @@ namespace SD_FlowerShop_Server.Repository
                 int stock = Convert.ToInt32(stockString);
                 string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock\n";
                 selectSQL += "FROM Flowers AS F\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-                selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+                selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
                 selectSQL += "WHERE FS.stock = " + stock + " AND FS.shopID = " + shopID + ";";
 
                 DataTable flowerTable = this.repository.GetTable(selectSQL);
@@ -427,7 +427,7 @@ namespace SD_FlowerShop_Server.Repository
         {
             try
             {
-                string searchSQL = "Select * from FlowerShopMVC.dbo.Flowers where flowerName = '" + name + "'";
+                string searchSQL = "Select * from FlowerShopProiect.dbo.Flowers where flowerName = '" + name + "'";
                 DataTable flowerTable = this.repository.GetTable(searchSQL);
                 if (flowerTable == null || flowerTable.Rows.Count == 0)
                     return null;
@@ -440,13 +440,32 @@ namespace SD_FlowerShop_Server.Repository
             }
         }
 
+        public List<Flower> SearchFlowerByTypeEmployee(string type, string shopID)
+        {
+            string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
+            selectSQL += "FROM FlowerShopProiect.dbo.Flowers AS F\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+            selectSQL += "WHERE F.flowerName = '" + type + "' and S.shopID = '" + shopID + "' and FS.stock > 0;";
+            DataTable flowerTable = this.repository.GetTable(selectSQL);
+            if (flowerTable == null || flowerTable.Rows.Count == 0)
+                return null;
+            List<Flower> list = new List<Flower>();
+            foreach (DataRow dr in flowerTable.Rows)
+            {
+                Flower flower = this.convertToFlower(dr);
+                list.Add(flower);
+            }
+            return list;
+        }
+
         public List<Flower> SearchFlowerByType(string type)
         {
             string selectSQL = "SELECT F.flowerID, F.flowerName, F.color, FS.price, FS.stock, S.shopID\n";
-            selectSQL += "FROM FlowerShopMVC.dbo.Flowers AS F\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
-            selectSQL += "JOIN FlowerShopMVC.dbo.Shops AS S ON FS.shopID = S.shopID\n";
-            selectSQL += "WHERE F.flowerName = '" + type + "';";
+            selectSQL += "FROM FlowerShopProiect.dbo.Flowers AS F\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.FlowersShop AS FS ON F.flowerID = FS.flowerID\n";
+            selectSQL += "JOIN FlowerShopProiect.dbo.Shops AS S ON FS.shopID = S.shopID\n";
+            selectSQL += "WHERE F.flowerName = '" + type + "' and FS.stock > 0;";
             DataTable flowerTable = this.repository.GetTable(selectSQL);
             if (flowerTable == null || flowerTable.Rows.Count == 0)
                 return null;

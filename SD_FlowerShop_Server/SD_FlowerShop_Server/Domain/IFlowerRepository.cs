@@ -25,5 +25,7 @@ namespace SD_FlowerShop_Server.Domain
         List<Flower> FlowerList_Stock(string stockString, uint shopID);
         Flower SearchFlowerByName(string name);
         List<Flower> SearchFlowerByType(string type);
+
+        List<Flower> SearchFlowerByTypeEmployee(string type, string shopID);
     }
 }

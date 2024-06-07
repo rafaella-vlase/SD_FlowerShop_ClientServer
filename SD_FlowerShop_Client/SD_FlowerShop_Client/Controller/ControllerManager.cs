@@ -89,7 +89,7 @@ namespace SD_FlowerShop_Client.Controller
             this.vManager.GetSaveJSONButton().Click += new EventHandler(saveJSON);
             this.vManager.GetSaveXMLButton().Click += new EventHandler(saveXML);
             this.vManager.GetSaveDOCButton().Click += new EventHandler(saveDOC);
-            //this.vManager.GetStatisticsButton().Click += new EventHandler(showStatistics);
+            this.vManager.GetStatisticsButton().Click += new EventHandler(showStatistics);
             this.vManager.GetLogoutButton().Click += new EventHandler(logout);
             this.vManager.GetFlowerTable().RowStateChanged += new DataGridViewRowStateChangedEventHandler(setFlowerControls);
             this.vManager.GetLanguageBox().SelectedIndexChanged += new EventHandler(changeLanguage);
@@ -309,11 +309,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Excel;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -328,11 +328,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.JSON;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -347,11 +347,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.XML;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Flower List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -366,11 +366,11 @@ namespace SD_FlowerShop_Client.Controller
                 FileSaveServiceFactory.FileType fileType = FileSaveServiceFactory.FileType.Word;
                 FileSaveService fileSaveService = FileSaveServiceFactory.CreateFileSaveService(fileType);
 
-                MemoryStream chartImage = new MemoryStream();
+                //MemoryStream chartImage = new MemoryStream();
                 List<Flower> flowerList = new List<Flower>();
                 string figureTitle = "Car List Figure";
 
-                fileSaveService.CreateFile(chartImage, flowerList, figureTitle);
+                fileSaveService.CreateFile(flowerList, figureTitle);
             }
             catch (Exception ex)
             {
@@ -378,19 +378,19 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
-        //private void showStatistics(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        ControllerStatistics statistics = new ControllerStatistics(index);
-        //        statistics.GetView();
-        //        this.vManager.Hide();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString());
-        //    }
-        //}
+        private void showStatistics(object sender, EventArgs e)
+        {
+            try
+            {
+                ControllerStatistics statistics = new ControllerStatistics(index);
+                statistics.GetView();
+                this.vManager.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
         private void logout(object sender, EventArgs e)
         {
