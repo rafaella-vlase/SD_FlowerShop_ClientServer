@@ -144,23 +144,24 @@ namespace SD_FlowerShop_Client.Controller
 
 
 
-                //if(sell <= stock)
-                //{
-                //    int newStock = stock - sell;
-                //    Flower flower = this.validInformation();
-                //    bool result = this.iFlowerService.UpdateFlower(flower);
+                if (sell <= stock)
+                {
+                    int newStock = stock - sell;
+                    this.vEmployee.GetStock().Text = newStock.ToString();
+                    Flower flower = this.validInformation();
+                    bool result = this.iFlowerService.UpdateFlower(flower);
 
-                //    if (result == true)
-                //    {
-                //        MessageBox.Show(lang.GetString("messageBoxUpdateSuccess"));
-                //        if (this.vEmployee.GetFlowerTable().Columns.Contains("shopID"))
-                //            this.vEmployee.GetFlowerTable().Columns.Remove("shopID");
-                //        this.resetGUIControls();
+                    if (result == true)
+                    {
+                        MessageBox.Show(lang.GetString("messageBoxUpdateSuccess"));
+                        if (this.vEmployee.GetFlowerTable().Columns.Contains("shopID"))
+                            this.vEmployee.GetFlowerTable().Columns.Remove("shopID");
+                        this.resetGUIControls();
 
-                //        if (this.vEmployee.GetFlowerTable() == null)
-                //            MessageBox.Show(lang.GetString("messageBoxNoData"));
-                //    }
-                //}
+                        if (this.vEmployee.GetFlowerTable() == null)
+                            MessageBox.Show(lang.GetString("messageBoxNoData"));
+                    }
+                }
             }
         }
 

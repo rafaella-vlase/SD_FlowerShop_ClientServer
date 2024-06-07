@@ -13,6 +13,10 @@ using System.ServiceModel;
 using SD_FlowerShop_Server.Domain;
 using System.Data;
 using SD_FlowerShop_Server.Repository;
+using System.Net.Mail;
+using System.Net;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace SD_FlowerShop_Client.Controller
 {
@@ -127,6 +131,60 @@ namespace SD_FlowerShop_Client.Controller
             }
         }
 
+        private void notifyRepairedWhatsapp()
+        {
+            try
+            {
+                if (this.vAdministrator.GetUserTable().SelectedRows.Count > 0)
+                {
+                    DataGridViewRow drvr = this.vAdministrator.GetUserTable().SelectedRows[0];
+
+
+
+                    TwilioClient.Init(".", "..");
+
+                    var message = MessageResource.Create(
+                        from: new Twilio.Types.PhoneNumber("whatsapp:+12292109286"),
+                        to: new Twilio.Types.PhoneNumber("whatsapp:+40765211258"),
+                        body: "Your credential changed!"
+                        );
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void notifyRepairedEmail()
+        {
+            try
+            {
+
+                using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+                {
+                    mail.From = new MailAddress("baldnikobellic@gmail.com");
+                    mail.To.Add("prowhite91@gmail.com");
+                    mail.Subject = "Account changes";
+                    mail.Body = "<h1>Your credential changed!</h1>";
+                    mail.IsBodyHtml = true;
+
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new NetworkCredential("baldnikobellic@gmail.com", "olacikita");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void updateUser(object sender, EventArgs e)
         {
             try
@@ -140,6 +198,8 @@ namespace SD_FlowerShop_Client.Controller
                         if (result)
                         {
                             MessageBox.Show(lang.GetString("messageBoxUpdateSuccess"));
+                            notifyRepairedEmail();
+                            notifyRepairedWhatsapp();
                             this.resetGUIControls();
                         }
                         else MessageBox.Show(lang.GetString("messageBoxUpdateFail"));
