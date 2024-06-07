@@ -13,6 +13,8 @@ namespace SD_FlowerShop_Server.Domain
         protected string password;
         protected string role;
         protected uint shopID;
+        protected string phoneNumber;
+        protected string email;
 
         public User()
         {
@@ -21,15 +23,19 @@ namespace SD_FlowerShop_Server.Domain
             password = "stardew";
             role = "Administrator";
             shopID = 0;
+            phoneNumber = "123456789";
+            email = "test@gmail.com";
         }
 
-        public User(uint userID, string username, string password, string role, uint shopID)
+        public User(uint userID, string username, string password, string role, uint shopID, string phoneNumber, string email)
         {
             this.userID = userID;
             this.username = username;
             this.password = password;
             this.role = role;
             this.shopID = shopID;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
         }
 
         public User(User user)
@@ -39,6 +45,8 @@ namespace SD_FlowerShop_Server.Domain
             password = user.password;
             role = user.role;
             shopID = user.shopID;
+            phoneNumber = user.phoneNumber;
+            email = user.email;
         }
 
         public uint UserID
@@ -69,6 +77,18 @@ namespace SD_FlowerShop_Server.Domain
         {
             get { return shopID; }
             set { shopID = value; }
+        }
+
+        public string PhoneNumber
+        {
+            get { return phoneNumber; }
+            set { phoneNumber = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
         }
 
         public override string ToString()

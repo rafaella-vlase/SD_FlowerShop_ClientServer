@@ -31,6 +31,7 @@ namespace SD_FlowerShop_Client.Controller
         private IFlowerService iFlowerService;
         private IUserService iUserService;
         private uint shopIDEmployee;
+        private int index;
 
         private string username;
 
@@ -39,9 +40,13 @@ namespace SD_FlowerShop_Client.Controller
             this.vEmployee = new VEmployee(index);
             this.lang = new LangHelper();
             this.lang.Add(this.vEmployee);
-            this.shopIDEmployee = Convert.ToUInt32(iUserService.GetShopID(username));
+
+
             this.username = username;
+            this.index = index;
+
             this.createBinding();
+            this.shopIDEmployee = Convert.ToUInt32(this.iUserService.GetShopID(username));
             this.eventsManagement();
         }
 
@@ -53,7 +58,9 @@ namespace SD_FlowerShop_Client.Controller
 
         private void createBinding()
         {
-            ChannelFactory<IFlowerService> channelEmployee;
+            ChannelFactory<IFlowerService> channelEmployeeFlower;
+            ChannelFactory<IUserService> channelEmployeeUser;
+
             NetTcpBinding tcp = new NetTcpBinding();
             tcp.OpenTimeout = new TimeSpan(0, 60, 0);
             tcp.SendTimeout = new TimeSpan(0, 60, 0);
@@ -64,10 +71,12 @@ namespace SD_FlowerShop_Client.Controller
             tcp.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
             tcp.Security.Transport.ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign;
             string s = ConfigurationManager.ConnectionStrings["IPAdress"].ConnectionString;
-            channelEmployee = new ChannelFactory<IFlowerService>(tcp, "net.tcp://" + s + ":52001/Flower");
+            channelEmployeeFlower = new ChannelFactory<IFlowerService>(tcp, "net.tcp://" + s + ":52002/Flower");
+            channelEmployeeUser = new ChannelFactory<IUserService>(tcp, "net.tcp://" + s + ":52001/User");
             try
             {
-                this.iFlowerService = channelEmployee.CreateChannel();
+                this.iUserService = channelEmployeeUser.CreateChannel();
+                this.iFlowerService = channelEmployeeFlower.CreateChannel();
             }
             catch (Exception ex)
             {
@@ -210,39 +219,21 @@ namespace SD_FlowerShop_Client.Controller
             {
                 if (this.vEmployee.GetFlowerTable() != null)
                 {
-                    this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmpty();
+                    this.vEmployee.GetFlowerTable().Rows.Clear();
                 }
                 if (this.vEmployee.GetSearch().Text.Length > 0)
                 {
                     string searchedFlower = this.vEmployee.GetSearch().Text;
                     List<Flower> list = this.iFlowerService.SearchFlowerByType(searchedFlower);
 
-                    System.Data.DataTable dt = new System.Data.DataTable();
-                    dt.Columns.Add("flowerID", typeof(uint));
-                    dt.Columns.Add("flowerName", typeof(string));
-                    dt.Columns.Add("color", typeof(string));
-                    dt.Columns.Add("price", typeof(float));
-                    dt.Columns.Add("stock", typeof(int));
-                    dt.Columns.Add("shopID", typeof(uint));
-
 
                     if (list != null && list.Count > 0)
                     {
                         foreach (Flower f in list)
                         {
-                            DataRow row = dt.NewRow();
-
-                            row["flowerID"] = f.FlowerID;
-                            row["flowerName"] = f.FlowerName;
-                            row["color"] = f.Color;
-                            row["price"] = f.Price;
-                            row["stock"] = f.Stock;
-                            row["shopID"] = f.ShopID;
-
-                            dt.Rows.Add(row);
+                            this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock, f.ShopID);
                         }
 
-                        this.vEmployee.GetFlowerTable().DataSource = dt;
                     }
                     else MessageBox.Show(lang.GetString("messageBoxNoFlowerDesiredName"));
                 }
@@ -260,36 +251,20 @@ namespace SD_FlowerShop_Client.Controller
                 string selectedOption = this.vEmployee.GetFilterByBox().SelectedItem.ToString();
 
                 if (this.vEmployee.GetFlowerTable() != null)
-                    this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmpty();
+                    this.vEmployee.GetFlowerTable().Rows.Clear();
                 if (selectedOption.Length > 0)
                 {
                     if (selectedOption.ToUpper() == "AVAILABILITY")
                     {
                         List<Flower> list = this.iFlowerService.FlowerList_Availability(shopIDEmployee);
 
-                        System.Data.DataTable dt = new System.Data.DataTable();
-                        dt.Columns.Add("flowerID", typeof(uint));
-                        dt.Columns.Add("flowerName", typeof(string));
-                        dt.Columns.Add("color", typeof(string));
-                        dt.Columns.Add("price", typeof(float));
-                        dt.Columns.Add("stock", typeof(int));
-
                         if (list != null && list.Count > 0)
                         {
                             foreach (Flower f in list)
                             {
-                                DataRow row = dt.NewRow();
-
-                                row["flowerID"] = f.FlowerID;
-                                row["flowerName"] = f.FlowerName;
-                                row["color"] = f.Color;
-                                row["price"] = f.Price;
-                                row["stock"] = f.Stock;
-
-                                dt.Rows.Add(row);
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                             }
 
-                            this.vEmployee.GetFlowerTable().DataSource = dt;
                         }
                         else MessageBox.Show(lang.GetString("messageBoxNoFlowerAvailable"));
                     }
@@ -298,29 +273,13 @@ namespace SD_FlowerShop_Client.Controller
                         Debug.WriteLine(this.vEmployee.GetPrice().ToString());
                         List<Flower> list = this.iFlowerService.FlowerList_Price(this.vEmployee.GetPrice().Text, shopIDEmployee);
 
-                        System.Data.DataTable dt = new System.Data.DataTable();
-                        dt.Columns.Add("flowerID", typeof(uint));
-                        dt.Columns.Add("flowerName", typeof(string));
-                        dt.Columns.Add("color", typeof(string));
-                        dt.Columns.Add("price", typeof(float));
-                        dt.Columns.Add("stock", typeof(int));
-
                         if (list != null && list.Count > 0)
                         {
                             foreach (Flower f in list)
                             {
-                                DataRow row = dt.NewRow();
-
-                                row["flowerID"] = f.FlowerID;
-                                row["flowerName"] = f.FlowerName;
-                                row["color"] = f.Color;
-                                row["price"] = f.Price;
-                                row["stock"] = f.Stock;
-
-                                dt.Rows.Add(row);
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                             }
 
-                            this.vEmployee.GetFlowerTable().DataSource = dt;
                         }
                         else MessageBox.Show(lang.GetString("messageBoxNoFlowerAvailable"));
                     }
@@ -328,29 +287,12 @@ namespace SD_FlowerShop_Client.Controller
                     {
                         List<Flower> list = this.iFlowerService.FlowerList_Color(this.vEmployee.GetColor().Text, shopIDEmployee);
 
-                        System.Data.DataTable dt = new System.Data.DataTable();
-                        dt.Columns.Add("flowerID", typeof(uint));
-                        dt.Columns.Add("flowerName", typeof(string));
-                        dt.Columns.Add("color", typeof(string));
-                        dt.Columns.Add("price", typeof(float));
-                        dt.Columns.Add("stock", typeof(int));
-
                         if (list != null && list.Count > 0)
                         {
                             foreach (Flower f in list)
                             {
-                                DataRow row = dt.NewRow();
-
-                                row["flowerID"] = f.FlowerID;
-                                row["flowerName"] = f.FlowerName;
-                                row["color"] = f.Color;
-                                row["price"] = f.Price;
-                                row["stock"] = f.Stock;
-
-                                dt.Rows.Add(row);
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                             }
-
-                            this.vEmployee.GetFlowerTable().DataSource = dt;
                         }
                         else MessageBox.Show(lang.GetString("messageBoxNoFlowerAvailable"));
                     }
@@ -358,29 +300,12 @@ namespace SD_FlowerShop_Client.Controller
                     {
                         List<Flower> list = this.iFlowerService.FlowerList_Stock(this.vEmployee.GetStock().Text, shopIDEmployee);
 
-                        System.Data.DataTable dt = new System.Data.DataTable();
-                        dt.Columns.Add("flowerID", typeof(uint));
-                        dt.Columns.Add("flowerName", typeof(string));
-                        dt.Columns.Add("color", typeof(string));
-                        dt.Columns.Add("price", typeof(float));
-                        dt.Columns.Add("stock", typeof(int));
-
                         if (list != null && list.Count > 0)
                         {
                             foreach (Flower f in list)
                             {
-                                DataRow row = dt.NewRow();
-
-                                row["flowerID"] = f.FlowerID;
-                                row["flowerName"] = f.FlowerName;
-                                row["color"] = f.Color;
-                                row["price"] = f.Price;
-                                row["stock"] = f.Stock;
-
-                                dt.Rows.Add(row);
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                             }
-
-                            this.vEmployee.GetFlowerTable().DataSource = dt;
                         }
                         else MessageBox.Show(lang.GetString("messageBoxNoFlowerAvailable"));
                     }
@@ -397,42 +322,31 @@ namespace SD_FlowerShop_Client.Controller
             try
             {
                 if (this.vEmployee.GetFlowerTable() != null)
-                    this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmpty();
+                    this.vEmployee.GetFlowerTable().Rows.Clear();
 
                 string selectedOption = this.vEmployee.GetOrderByBox().SelectedItem.ToString();
                 if (selectedOption.Length > 0)
                 {
                     if (selectedOption.ToUpper() == "NONE")
                     {
-                        this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmployee(shopIDEmployee);
+                        List<Flower> list = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
+                        foreach(Flower f in list)
+                        {
+                            this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
+                        }
                     }
                     else if (selectedOption.ToUpper() == "COLOR AND PRICE")
                     {
                         List<Flower> list = this.iFlowerService.FlowerList_ColorPrice(shopIDEmployee);
 
-                        System.Data.DataTable dt = new System.Data.DataTable();
-                        dt.Columns.Add("flowerID", typeof(uint));
-                        dt.Columns.Add("flowerName", typeof(string));
-                        dt.Columns.Add("color", typeof(string));
-                        dt.Columns.Add("price", typeof(float));
-                        dt.Columns.Add("stock", typeof(int));
 
                         if (list != null && list.Count > 0)
                         {
                             foreach (Flower f in list)
                             {
-                                DataRow row = dt.NewRow();
-
-                                row["flowerID"] = f.FlowerID;
-                                row["flowerName"] = f.FlowerName;
-                                row["color"] = f.Color;
-                                row["price"] = f.Price;
-                                row["stock"] = f.Stock;
-
-                                dt.Rows.Add(row);
+                                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
                             }
 
-                            this.vEmployee.GetFlowerTable().DataSource = dt;
                         }
                         else MessageBox.Show(lang.GetString("messageBoxNoData"));
                     }
@@ -451,9 +365,25 @@ namespace SD_FlowerShop_Client.Controller
             {
                 if (this.vEmployee.GetFlowerTable() != null)
                 {
-                    this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmpty();
-                    this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmployee(shopIDEmployee);
+                    this.vEmployee.GetFlowerTable().Rows.Clear();
                 }
+
+                if (this.vEmployee.GetFlowerTable().Columns.Contains("shopID"))
+                    this.vEmployee.GetFlowerTable().Columns.Remove("shopID");
+
+                List<Flower> list = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
+                foreach (Flower f in list)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = f.FlowerID });
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = f.FlowerName });
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = f.Color });
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = f.Price });
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = f.Stock });
+                    this.vEmployee.GetFlowerTable().Rows.Add(row);
+                }
+                this.vEmployee.GetFlowerTable().Rows.Add();
+
             }
             catch (Exception exception)
             {
@@ -608,8 +538,12 @@ namespace SD_FlowerShop_Client.Controller
             this.vEmployee.GetOrderByBox().SelectedIndex = 0;
             this.vEmployee.GetFilterByBox().SelectedIndex = 0;
             this.vEmployee.GetSearch().Text = string.Empty;
-            this.vEmployee.GetFlowerTable().DataSource = this.iFlowerService.FlowerTableEmpty();
-            this.vEmployee.GetFlowerTable().DataSource = iFlowerService.FlowerTableEmployee(shopIDEmployee);
+            this.vEmployee.GetFlowerTable().Rows.Clear();
+            List<Flower> list = this.iFlowerService.FlowerListEmployee(shopIDEmployee);
+            foreach (Flower f in list)
+            {
+                this.vEmployee.GetFlowerTable().Rows.Add(f.FlowerID, f.FlowerName, f.Color, f.Price, f.Stock);
+            }
         }
 
         private Flower validInformation()

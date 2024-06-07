@@ -162,6 +162,9 @@
   <data name="labelCriterion" xml:space="preserve">
     <value>Criterion</value>
   </data>
+  <data name="labelEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
   <data name="labelFilterBy" xml:space="preserve">
     <value>Filter By</value>
   </data>
@@ -179,6 +182,9 @@
   </data>
   <data name="labelPassword" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="labelPhoneNumber" xml:space="preserve">
+    <value>PhoneNo</value>
   </data>
   <data name="labelPrice" xml:space="preserve">
     <value>Price</value>

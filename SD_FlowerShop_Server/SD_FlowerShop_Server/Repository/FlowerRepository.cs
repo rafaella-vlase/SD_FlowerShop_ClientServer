@@ -117,7 +117,7 @@ namespace SD_FlowerShop_Server.Repository
             List<Flower> list = new List<Flower>();
             foreach (DataRow dr in flowerTable.Rows)
             {
-                Flower flower = this.convertToFlower(dr);
+                Flower flower = this.convertToFlowerEmployee(dr);
                 list.Add(flower);
             }
             return list;

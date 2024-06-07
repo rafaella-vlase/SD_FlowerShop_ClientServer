@@ -11,6 +11,7 @@ using SD_FlowerShop_Client.Language;
 using System.Windows.Forms;
 using System.ServiceModel;
 using System.Configuration;
+using System.Diagnostics;
 
 namespace SD_FlowerShop_Client.Controller
 {
@@ -104,6 +105,7 @@ namespace SD_FlowerShop_Client.Controller
                         if (role.Equals("Employee"))
                         {
                             this.vLogin.Hide();
+                            Debug.WriteLine(index + " " + username);
                             ControllerEmployee controllerEmployee = new ControllerEmployee(index, username);
                             controllerEmployee.GetView();
 
@@ -114,7 +116,9 @@ namespace SD_FlowerShop_Client.Controller
                         }
                         else if (role.Equals("Administrator"))
                         {
-                            MessageBox.Show("Admin success");
+                            this.vLogin.Hide();
+                            ControllerAdministrator controllerAdministrator = new ControllerAdministrator(index);
+                            controllerAdministrator.GetView();
                         }
                     }
                     else MessageBox.Show("Wrong username or password");

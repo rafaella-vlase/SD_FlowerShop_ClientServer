@@ -39,7 +39,7 @@ namespace SD_FlowerShop_Server.Service
 
             try
             {
-                serviceHost.AddServiceEndpoint(typeof(IFlowerService), tcp, "net.tcp://" + s + ":52001/Flower");
+                serviceHost.AddServiceEndpoint(typeof(IFlowerService), tcp, "net.tcp://" + s + ":52002/Flower");
                 serviceHost.Open();
                 Console.WriteLine("The connection to the DB was done successfully!");
             }

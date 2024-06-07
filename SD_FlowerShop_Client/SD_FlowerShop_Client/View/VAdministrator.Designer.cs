@@ -52,6 +52,17 @@
             this.buttonViewAll = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelPhoneNumber = new System.Windows.Forms.Label();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBubble)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShopID)).BeginInit();
@@ -313,12 +324,104 @@
             this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userID,
+            this.username,
+            this.password,
+            this.role,
+            this.shopID,
+            this.phoneNumber,
+            this.email});
             this.dataGridViewUsers.Location = new System.Drawing.Point(138, 664);
             this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 82;
             this.dataGridViewUsers.Size = new System.Drawing.Size(1954, 810);
             this.dataGridViewUsers.TabIndex = 24;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(1858, 401);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxEmail.Multiline = true;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(364, 39);
+            this.textBoxEmail.TabIndex = 50;
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(1858, 322);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxPhoneNumber.Multiline = true;
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(364, 39);
+            this.textBoxPhoneNumber.TabIndex = 49;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe Script", 15F, System.Drawing.FontStyle.Bold);
+            this.labelEmail.Location = new System.Drawing.Point(1528, 391);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(159, 67);
+            this.labelEmail.TabIndex = 48;
+            this.labelEmail.Text = "Email";
+            // 
+            // labelPhoneNumber
+            // 
+            this.labelPhoneNumber.AutoSize = true;
+            this.labelPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.labelPhoneNumber.Font = new System.Drawing.Font("Segoe Script", 15F, System.Drawing.FontStyle.Bold);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(1528, 311);
+            this.labelPhoneNumber.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelPhoneNumber.Name = "labelPhoneNumber";
+            this.labelPhoneNumber.Size = new System.Drawing.Size(222, 67);
+            this.labelPhoneNumber.TabIndex = 47;
+            this.labelPhoneNumber.Text = "PhoneNo";
+            // 
+            // userID
+            // 
+            this.userID.HeaderText = "User ID";
+            this.userID.MinimumWidth = 10;
+            this.userID.Name = "userID";
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.MinimumWidth = 10;
+            this.username.Name = "username";
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Password";
+            this.password.MinimumWidth = 10;
+            this.password.Name = "password";
+            // 
+            // role
+            // 
+            this.role.HeaderText = "Role";
+            this.role.MinimumWidth = 10;
+            this.role.Name = "role";
+            // 
+            // shopID
+            // 
+            this.shopID.HeaderText = "Shop ID";
+            this.shopID.MinimumWidth = 10;
+            this.shopID.Name = "shopID";
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.HeaderText = "Phone Number";
+            this.phoneNumber.MinimumWidth = 10;
+            this.phoneNumber.Name = "phoneNumber";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 10;
+            this.email.Name = "email";
             // 
             // VAdministrator
             // 
@@ -327,6 +430,10 @@
             this.BackgroundImage = global::SD_FlowerShop_Client.Properties.Resources.defaultBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2254, 1546);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxPhoneNumber);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.labelPhoneNumber);
             this.Controls.Add(this.comboBoxChangeLanguage);
             this.Controls.Add(this.labelChangeLanguage);
             this.Controls.Add(this.pictureBoxBubble);
@@ -389,5 +496,16 @@
         private System.Windows.Forms.Button buttonViewAll;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shopID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelPhoneNumber;
     }
 }

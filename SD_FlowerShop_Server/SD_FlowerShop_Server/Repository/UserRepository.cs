@@ -23,14 +23,14 @@ namespace SD_FlowerShop_Server.Repository
             {
                 string commandSQL = "insert into Users values('";
                 commandSQL += user.Username + "','" + user.Password + "','" + user.Role;
-                commandSQL += "', " + "NULL" + ")";
+                commandSQL += "', " + "NULL" + ", '" + user.PhoneNumber + "','" + user.Email + "')";
                 return this.repository.CommandSQL(commandSQL);
             }
             else
             {
                 string commandSQL = "insert into Users values('";
                 commandSQL += user.Username + "','" + user.Password + "','" + user.Role;
-                commandSQL += "', " + user.ShopID + ")";
+                commandSQL += "', " + user.ShopID + ", '" + user.PhoneNumber + "','" + user.Email + "')";
                 return this.repository.CommandSQL(commandSQL);
             }
         }
@@ -94,6 +94,7 @@ namespace SD_FlowerShop_Server.Repository
                 commandSQL += user.Username + "', password = '" + user.Password;
                 commandSQL += "', role = '" + user.Role;
                 commandSQL += "', shopID = " + "NULL";
+                commandSQL += ", phoneNumber = '" + user.PhoneNumber + "', email = '" + user.Email + "'";
                 commandSQL += " where userID = " + user.UserID;
                 return this.repository.CommandSQL(commandSQL);
             }
@@ -103,6 +104,7 @@ namespace SD_FlowerShop_Server.Repository
                 commandSQL += user.Username + "', password = '" + user.Password;
                 commandSQL += "', role = '" + user.Role;
                 commandSQL += "', shopID = " + user.ShopID;
+                commandSQL += ", phoneNumber = '" + user.PhoneNumber + "', email = '" + user.Email + "'";
                 commandSQL += " where userID = " + user.UserID;
                 return this.repository.CommandSQL(commandSQL);
             }
@@ -203,7 +205,7 @@ namespace SD_FlowerShop_Server.Repository
                 shopID = 1;
             else
                 shopID = (int)dataRow["shopID"];
-            return new User((uint)id, (string)dataRow["username"], (string)dataRow["password"], (string)dataRow["role"], (uint)shopID);
+            return new User((uint)id, (string)dataRow["username"], (string)dataRow["password"], (string)dataRow["role"], (uint)shopID, (string)dataRow["phoneNumber"], (string)dataRow["email"]);
         }
 
     }

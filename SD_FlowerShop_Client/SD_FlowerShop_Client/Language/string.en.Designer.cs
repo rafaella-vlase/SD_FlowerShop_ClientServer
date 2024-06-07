@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVC_ServiceAuto.Model.Language
+namespace SD_FlowerShop_Client.Language
 {
     using System;
 
@@ -45,7 +45,7 @@ namespace MVC_ServiceAuto.Model.Language
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MVC_FlowerShop.Model.Language.string", typeof(_string).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SD_FlowerShop_Client.Language.string", typeof(_string).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
